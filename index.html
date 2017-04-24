@@ -1,35 +1,67 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="ru">
 <head>
+  <title>Bookmarklet</title>
   <meta charset="UTF-8">
   <style>
-    .text-block {
-      float: left;
-      width: 46%;
-      background: #c9f76f;
-      padding: 10px;
-      margin: 20px;
-      box-sizing: border-box;
-      border-radius: 20px 20px 20px 20px;
+    .main{
+      width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 200px;
+      font-size: 20px;
+    }
+    .article{
+      margin-top: 30px;
+      font-size: 16px;
+      border-top: 1px solid;
+    }
+    h3{
+      text-align: center;
     }
   </style>
+  <!--стили букмарклета-->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/ChungaChanga/bookmarklet/6183fdd2/bootstrap-v.0.1/css/bootstrap.css">
 </head>
 <body>
-<a href="javascript:(function(){
-  var script = document.createElement('script');
-  script.setAttribute('src', 'https://cdn.rawgit.com/ChungaChanga/bookmarklet/754c47ad/bmk.js');
-  var link = document.createElement('link');
-  link.setAttribute('rel', 'stylesheet');
-  link.setAttribute('href', 'https://cdn.rawgit.com/ChungaChanga/bookmarklet/754c47ad/bootstrap/css/bootstrap.css');
-  document.body.appendChild(link);
-  document.body.appendChild(script);
-})()">Переводчик</a>
-<div class="text-block">
-  HTML (от англ. HyperText Markup Language — «язык гипертекстовой разметки») — стандартизированный язык разметки документов во Всемирной паутине. Большинство веб-страниц содержат описание разметки на языке HTML (или XHTML). Язык HTML интерпретируется браузерами; полученный в результате интерпретации форматированный текст отображается на экране монитора компьютера или мобильного устройства.
-  Язык HTML является приложением SGML (стандартного обобщённого языка разметки) и соответствует международному стандарту ISO 8879.
+<div class="main">
+  <div class="header">
+  <p>
+    Добро пожаловать! Вы находитесь на презентационной странице букмарклета-переводчика*.
+    Для его использования достаточно добавить следующую ссылку
+  </p>
+  <h3>
+    <a href="javascript:(function(){
+      var script = document.createElement('script');
+      script.setAttribute('src', 'https://cdn.rawgit.com/ChungaChanga/bookmarklet/6183fdd2/bmk-v.0.1.js');
+      var link = document.createElement('link');
+      link.setAttribute('rel', 'stylesheet');
+      link.setAttribute('href', 'https://cdn.rawgit.com/ChungaChanga/bookmarklet/6183fdd2/bootstrap-v.0.1/css/bootstrap.css');
+      document.body.appendChild(link);
+      document.body.appendChild(script);
+    })()">Переводчик-v.0.1</a>
+  </h3>
+  <p>
+    в закладки браузера и запустить на сторонней странице.
+    На этой странице уже запущен букмарклет (в правом верхнем углу).
+    Вы можете испытать его, попробовав перевести следующий текст: 
+    <mark>There is no smoke without fire.</mark>
+  </p>
+  <p>
+    Заметьте, что букмарклет ведет себя по-разному
+    при попытках перевести одно отдельное слово и словосочетание.
+  </p>
+  <p>
+  *<small>Текущая версия букмарклета использует
+    <a href="https://tech.yandex.ru/dictionary/" target="_blank">API Яндекс-словаря</a>
+    для перевода отдельных слов, и
+    <a href="https://tech.yandex.ru/translate/" target="_blank">API Яндекс-переводчика</a>
+    для перевода словосочетаний. Доступ к APIs осуществляется по бесплатным ключам.
+    <a href="https://github.com/ChungaChanga/bookmarklet" target="_blank">Исходный код букмарклета.</a>
+  </small>
+  </p>
 </div>
-<div class="text-block">
-  Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications. With Cascading Style Sheets (CSS) and JavaScript it forms a triad of cornerstone technologies for the World Wide Web.[1] Web browsers receive HTML documents from a webserver or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
-</div>
+<script src="https://cdn.rawgit.com/ChungaChanga/bookmarklet/6183fdd2/bmk-v.0.1.js">
+</script>
 </body>
 </html>
